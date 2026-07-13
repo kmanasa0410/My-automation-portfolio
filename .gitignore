@@ -1,0 +1,22 @@
+# Node dependencies (Playwright)
+node_modules/
+package-lock.json
+
+# Test results and reports
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.pytest_cache/
+htmlcov/
+*.log
+
+# Python virtual environments & compiled files (Selenium)
+venv/
+.env
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store
+Thumbs.db
