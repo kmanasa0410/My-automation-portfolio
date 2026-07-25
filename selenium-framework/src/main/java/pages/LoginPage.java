@@ -13,6 +13,7 @@ public class LoginPage {
     private final WebDriver driver;
     private final WebDriverWait wait;
     private final Logger log = LogManager.getLogger(this.getClass());
+    private final By flashMessage = By.id("flash");
 
     // 1. Private UI Selectors (Encapsulation)
     private final By Username = By.id("username");
@@ -40,6 +41,10 @@ public class LoginPage {
     public void clickLogin() {
         log.info("Submitting authentication execution forms.");
         wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
+    }
+    public String getErrorMessageText() {
+    	log.info("capturing Error Message " + Username + passwordInput);
+    	return wait.until(ExpectedConditions.visibilityOfElementLocated(flashMessage)).getText();
     }
 
     // A clean wrapper method to handle the comprehensive action step
