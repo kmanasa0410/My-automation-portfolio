@@ -13,6 +13,7 @@ class LoginPage {
         this.loginButton = page.locator('button[id="submit-login"]');
         // Looks for either the success alert banner or the logout link button
         this.secureAreaHeader = page.locator('#flash');
+        
     }
 
     // 2. Structural Interactivity Actions
